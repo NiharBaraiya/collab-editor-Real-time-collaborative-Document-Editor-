@@ -16,7 +16,10 @@ A full-stack collaborative document editor that allows multiple users to edit th
 - 🔒 Read-only document support
 - 👥 Live user presence indicator
 - 🔗 Shareable document links(Gmail)
-
+- ✅ Edit/Delete/Pin individual messages or entries
+- ✅ Basic search functionality in chat
+- ✅ Seen indicator on messages (basic)
+- ✅ Clean UI with Tailwind CSS(Responsive Website)
 ---
 
 ## 🖥️ Tech Stack
@@ -69,7 +72,7 @@ Make sure MongoDB is running locally.
 ```bash
 cd frontend
 npm install
-npm start
+npm run dev
 ```
 
 Visit: `http://localhost:3000`
