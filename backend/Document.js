@@ -12,7 +12,7 @@ const VersionSchema = new mongoose.Schema({
   },
 });
 
-// ✅ Shared user schema
+//  Shared user schema
 const SharedUserSchema = new mongoose.Schema({
   email: {
     type: String,
@@ -45,9 +45,9 @@ const DocumentSchema = new mongoose.Schema(
       type: Boolean,
       default: false,
     },
-    versions: [VersionSchema], // ✅ Auto-saved snapshots every 60s
+    versions: [VersionSchema], //  Auto-saved snapshots every 60s
 
-    // ✅ Shared with users (email + role)
+    // Shared with users (email + role)
     sharedWith: [SharedUserSchema],
   },
   {
