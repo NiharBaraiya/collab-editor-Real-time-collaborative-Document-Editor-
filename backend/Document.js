@@ -51,7 +51,7 @@ const DocumentSchema = new mongoose.Schema(
     sharedWith: [SharedUserSchema],
   },
   {
-    timestamps: true, // ✅ createdAt, updatedAt
+    timestamps: true, // createdAt, updatedAt
   }
 );
 
