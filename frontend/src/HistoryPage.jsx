@@ -6,7 +6,7 @@ function HistoryPage() {
   const [versions, setVersions] = useState([]);
   const navigate = useNavigate();
 
-  // ✅ Fetch version history for the document
+  //  Fetch version history for the document
   useEffect(() => {
     fetch(`http://localhost:3001/documents/${id}/versions`)
       .then((res) => res.json())
@@ -14,7 +14,7 @@ function HistoryPage() {
       .catch((err) => console.error("Failed to fetch version history:", err));
   }, [id]);
 
-  // ✅ Restore specific version
+  //  Restore specific version
   const handleRestore = async (versionId) => {
     const confirmed = window.confirm(
       "Restore this version? This will overwrite current content."
