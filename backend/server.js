@@ -22,8 +22,8 @@ const nodemailer = require("nodemailer");
 const transporter = nodemailer.createTransport({
   service: "gmail", // or use another like "hotmail"
   auth: {
-    user: "baraiyanihar106@gmail.com",          // 🔁 Replace with your email
-    pass: "your app password",       // 🔐 Use Gmail App Password (not regular password)
+    user: "baraiyanihar106@gmail.com",          //  Replace with your email
+    pass: "your app password",       //  Use Gmail App Password (not regular password)
   },
 });
 
@@ -52,8 +52,8 @@ io.on("connection", (socket) => {
     if (!doc) return;
 
     doc.data = data;
-    doc.versions.push({ data }); // ✅ push version snapshot
-    await doc.save();            // ✅ save updated doc
+    doc.versions.push({ data }); //  push version snapshot
+    await doc.save();            //  save updated doc
     console.log("Auto-saved document version");
   } catch (err) {
     console.error("Error saving document:", err);
@@ -62,7 +62,7 @@ io.on("connection", (socket) => {
 
   
 
-    // ✅ Real-time cursor position broadcast
+    //  Real-time cursor position broadcast
     socket.on("cursor-change", (cursor) => {
       socket.broadcast.to(documentId).emit("remote-cursor-change", {
         ...cursor,
