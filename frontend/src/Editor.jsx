@@ -1,4 +1,4 @@
-// Editor.jsx (ReactQuill with full toolbar including undo/redo/star/settings working)
+// Editor.jsx 
 
 import React, { useEffect, useState, useCallback, useRef } from "react";
 import PropTypes from "prop-types";
