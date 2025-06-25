@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import Editor from "./Editor";
-import ShareModal from "./ShareModal"; // ✅ Import ShareModal
+import ShareModal from "./ShareModal"; //  Import ShareModal
 
 function DocumentPage() {
   const { id } = useParams();
@@ -9,7 +9,7 @@ function DocumentPage() {
   const [editMode, setEditMode] = useState(false);
   const [readOnly, setReadOnly] = useState(false);
   const [pinned, setPinned] = useState(false);
-  const [showShareModal, setShowShareModal] = useState(false); // ✅ modal toggle
+  const [showShareModal, setShowShareModal] = useState(false); //  modal toggle
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -79,7 +79,7 @@ function DocumentPage() {
           🕘 View History
         </button>
 
-        {/* ✅ Share Button */}
+        {/*  Share Button */}
         <button
           onClick={() => setShowShareModal(true)}
           className="ml-2 px-3 py-1 text-sm bg-green-200 hover:bg-green-300 rounded"
@@ -94,7 +94,7 @@ function DocumentPage() {
         </div>
       </div>
 
-      {/* ✅ Share Modal */}
+      {/* Share Modal */}
       {showShareModal && (
         <ShareModal documentId={id} onClose={() => setShowShareModal(false)} />
       )}
